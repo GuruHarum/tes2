@@ -2334,19 +2334,19 @@
         
         // Show Page
         function showPage(pageNumber) {
-            // Hide all pages
-            page1.classList.add('hidden');
-            page2.classList.add('hidden');
-            page3.classList.add('hidden');
-            
-            // Show selected page
-            if (pageNumber === 1) {
-                page1.classList.remove('hidden');
-                page1.classList.add('fade-in');
-            } else if (pageNumber === 2) {
-                page2.classList.remove('hidden');
-                page2.classList.add('fade-in');
-            } else if (pageNumber === 3) {
+    // Hide all pages
+    page1.classList.add('hidden');
+    page2.classList.add('hidden');
+    page3.classList.add('hidden');
+
+    // Show selected page
+    if (pageNumber === 1) {
+        page1.classList.remove('hidden');
+        page1.classList.add('fade-in');
+    } else if (pageNumber === 2) {
+        page2.classList.remove('hidden');
+        page2.classList.add('fade-in');
+    } else if (pageNumber === 3) {
         page3.classList.remove('hidden');
         page3.classList.add('fade-in');
         if (!adminDataLoaded) {
@@ -2371,21 +2371,7 @@
             filterAttendanceData();
         }
     }
-                
-                // Set default date to today
-                if (!filterMonth.value) {
-                    const today = new Date();
-                    const month = String(today.getMonth() + 1).padStart(2, '0');
-                    filterMonth.value = month;
-                }
-                
-                // Update attendance statistics
-                updateAttendanceStats();
-                
-                // Filter and render admin data
-                filterAttendanceData();
-            }
-        }
+}
         
         // Open Login Modal
         function openLoginModal() {
